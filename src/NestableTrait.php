@@ -101,7 +101,7 @@ trait NestableTrait
             $this->source = static::$_instance->get();
         } else {
             // if not call the parent directly
-            $this->source = parent::all();
+            $this->source = parent::orderBy('name')->get();
         }
 
         if (!static::$nested) {
